@@ -1,0 +1,411 @@
+.projects-section {
+  background: var(--bg-primary);
+}
+
+.projects-category {
+  margin-bottom: 4rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  i {
+    font-size: 1.25rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 360px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.project-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-primary);
+  }
+}
+
+.project-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-gallery {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+  &.clickable {
+    cursor: pointer;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+    
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 3;
+  
+  i {
+    font-size: 1.25rem;
+  }
+}
+
+.project-gallery.clickable:hover .image-overlay {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.image-count {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.project-icon {
+  font-size: 4rem;
+  color: var(--text-secondary);
+}
+
+.project-placeholder {
+  font-size: 3rem;
+  color: var(--text-tertiary);
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-1px);
+  }
+}
+
+.project-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  
+  .btn {
+    flex: 1;
+    min-width: fit-content;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    
+    @media (max-width: 480px) {
+      flex-basis: 100%;
+    }
+  }
+}
+
+// Animation delays for staggered entrance
+.project-card {
+  animation-delay: calc(var(--animation-delay, 0) * 0.1s);
+}
+
+// Generate animation delays
+@for $i from 1 through 10 {
+  .project-card:nth-child(#{$i}) {
+    --animation-delay: #{$i - 1};
+  }
+}
+
+// Image Modal Styles
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+  }
+  
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+.modal-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  
+  @media (max-width: 768px) {
+    min-height: 300px;
+  }
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  
+  @media (max-width: 768px) {
+    max-height: 60vh;
+  }
+}
+
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: var(--accent-primary);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  &.modal-prev {
+    left: 1rem;
+  }
+  
+  &.modal-next {
+    right: 1rem;
+  }
+  
+  i {
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    
+    &.modal-prev {
+      left: 0.5rem;
+    }
+    
+    &.modal-next {
+      right: 0.5rem;
+    }
+  }
+}
+
+.modal-info {
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  
+  h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+    
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.modal-counter {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .project-card {
+    .project-content {
+      padding: 1.25rem;
+    }
+    
+    .project-title {
+      font-size: 1.1rem;
+    }
+    
+    .project-description {
+      font-size: 0.9rem;
+    }
+  }
+}
