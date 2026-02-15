@@ -1,5 +1,5 @@
 :root {
-  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
 }
 
@@ -18,6 +18,22 @@
   --matrix-color: #00ff41;
   --code-bg: #1e1e1e;
   --code-border: #333;
+  
+  // VS Code specific variables
+  --vscode-bg: #1e1e1e;
+  --vscode-sidebar-bg: #252526;
+  --vscode-activity-bar-bg: #333333;
+  --vscode-editor-bg: #1e1e1e;
+  --vscode-tab-bg: #2d2d30;
+  --vscode-tab-active-bg: #1e1e1e;
+  --vscode-terminal-bg: #1e1e1e;
+  --vscode-text: #cccccc;
+  --vscode-text-secondary: #969696;
+  --vscode-border: #3c3c3c;
+  --vscode-accent: #007acc;
+  --vscode-success: #4ec9b0;
+  --vscode-warning: #ffcd3c;
+  --vscode-error: #f44747;
 }
 
 .light {
@@ -35,6 +51,22 @@
   --matrix-color: #059669;
   --code-bg: #f8fafc;
   --code-border: #e2e8f0;
+  
+  // VS Code specific variables
+  --vscode-bg: #ffffff;
+  --vscode-sidebar-bg: #f3f3f3;
+  --vscode-activity-bar-bg: #2c2c2c;
+  --vscode-editor-bg: #ffffff;
+  --vscode-tab-bg: #ececec;
+  --vscode-tab-active-bg: #ffffff;
+  --vscode-terminal-bg: #ffffff;
+  --vscode-text: #383a42;
+  --vscode-text-secondary: #696c77;
+  --vscode-border: #e5e5e5;
+  --vscode-accent: #005fb8;
+  --vscode-success: #22863a;
+  --vscode-warning: #e36209;
+  --vscode-error: #d73a49;
 }
 
 * {
@@ -59,9 +91,26 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+  
+  @media (max-width: 1024px) {
+    padding: 0 1.5rem;
+  }
   
   @media (max-width: 768px) {
     padding: 0 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 1rem;
+  }
+  
+  @media (max-width: 360px) {
+    padding: 0 0.75rem;
+  }
+  
+  @media (max-width: 320px) {
+    padding: 0 0.5rem;
   }
 }
 
@@ -77,6 +126,18 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: inherit;
+  text-align: center;
+  justify-content: center;
+  
+  @media (max-width: 480px) {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 360px) {
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+  }
   
   &.btn-primary {
     background: var(--accent-primary);
@@ -103,6 +164,10 @@ body {
     padding: 0.5rem;
     border-radius: 50%;
     
+    @media (max-width: 480px) {
+      padding: 0.45rem;
+    }
+    
     &:hover {
       background: var(--bg-secondary);
     }
@@ -112,8 +177,20 @@ body {
 .section {
   padding: 6rem 0;
   
+  @media (max-width: 1024px) {
+    padding: 5rem 0;
+  }
+  
   @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+  
+  @media (max-width: 480px) {
     padding: 3rem 0;
+  }
+  
+  @media (max-width: 360px) {
+    padding: 2.5rem 0;
   }
 }
 
@@ -123,9 +200,24 @@ body {
   text-align: center;
   margin-bottom: 3rem;
   
+  @media (max-width: 1024px) {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+  
   @media (max-width: 768px) {
     font-size: 2rem;
     margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (max-width: 360px) {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 }
 
