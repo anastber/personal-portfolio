@@ -13,6 +13,16 @@
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 3rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    max-width: calc(100% - 3rem);
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 480px) {
+    max-width: calc(100% - 2.5rem);
   }
 }
 
@@ -33,6 +43,17 @@
     line-height: 1.7;
     margin-bottom: 2rem;
     font-size: 1.1rem;
+    word-wrap: break-word;
+    hyphens: auto;
+    
+    @media (max-width: 1024px) {
+      text-align: left;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
   }
 }
 
@@ -92,9 +113,15 @@
   color: var(--text-primary);
   text-decoration: none;
   transition: color 0.2s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   
   &:hover {
     color: var(--accent-primary);
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
   }
 }
 

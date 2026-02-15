@@ -12,6 +12,16 @@
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 3rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    max-width: calc(100% - 3rem);
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 480px) {
+    max-width: calc(100% - 2.5rem);
   }
 }
 
@@ -24,6 +34,8 @@
       line-height: 1.7;
       margin-bottom: 1.5rem;
       font-size: 1.1rem;
+      word-wrap: break-word;
+      hyphens: auto;
       
       strong {
         color: var(--text-primary);
@@ -32,6 +44,11 @@
       
       &:last-child {
         margin-bottom: 0;
+      }
+      
+      @media (max-width: 1024px) {
+        text-align: left;
+        max-width: 100%;
       }
     }
   }
@@ -151,17 +168,27 @@
     gap: 2rem;
   }
   
-  .about-text .about-intro p {
-    font-size: 1rem;
+  .about-text {
+    text-align: left;
+    
+    .about-intro p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
   }
   
-  .skills-section h3,
-  .education h3 {
-    font-size: 1.25rem;
+  .skills-section,
+  .education {
+    text-align: center;
+    
+    h3 {
+      font-size: 1.25rem;
+    }
   }
   
   .education-item {
     padding: 1.25rem;
+    text-align: left;
     
     h4 {
       font-size: 1.1rem;
