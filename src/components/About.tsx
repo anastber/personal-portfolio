@@ -44,7 +44,7 @@ const About: React.FC = () => {
               </h3>
               <div className="education-item">
                 <h4>Engineering Degree</h4>
-                <p>École Centrale de Lyon • 2022 - 2027</p>
+                <p>École Centrale de Lyon • 2023 - 2027</p>
                 <span className="status">Currently on gap year for internship</span>
               </div>
             </div>
