@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /*.map
+Disallow: /src/
+Disallow: /node_modules/
+
+Sitemap: https://anastber.com/sitemap.xml
