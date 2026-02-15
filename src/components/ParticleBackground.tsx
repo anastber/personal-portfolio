@@ -55,7 +55,6 @@ const ParticleBackground: React.FC = () => {
     };
 
     const handleTouchMove = (e: TouchEvent) => {
-      e.preventDefault();
       const touch = e.touches[0];
       mouseRef.current.x = touch.clientX;
       mouseRef.current.y = touch.clientY;
@@ -139,7 +138,7 @@ const ParticleBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
 
     draw();
 
