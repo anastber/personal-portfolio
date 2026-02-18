@@ -1,4 +1,5 @@
 import React from 'react';
+import Signature from './Signature';
 import './Contact.scss';
 
 const Contact: React.FC = () => {
@@ -91,6 +92,8 @@ const Contact: React.FC = () => {
                   Download Resume
                 </a>
               </div>
+              
+              <Signature />
             </div>
           </div>
         </div>
