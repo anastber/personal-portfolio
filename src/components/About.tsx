@@ -12,9 +12,7 @@ const About: React.FC = () => {
     <section id="about" className="about-section section">
       <div className="container">
         <h2 className="section-title">
-          <span className="code-text">def </span>
-          <span className="gradient-text">about_me</span>
-          <span className="code-text">():</span>
+          <span className="gradient-text">About Me</span>
         </h2>
 
         <div className="about-content">

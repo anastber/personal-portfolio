@@ -33,9 +33,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="contact-section section">
       <div className="container">
         <h2 className="section-title">
-          <span className="code-text">await </span>
-          <span className="gradient-text">connect</span>
-          <span className="code-text">('anas.tber@etu.ec-lyon.fr')</span>
+          <span className="gradient-text">Contact</span>
         </h2>
 
         <div className="contact-content">

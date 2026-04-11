@@ -45,29 +45,6 @@ const Projects: React.FC = () => {
   };
 
   const projects: Project[] = [
-    // Internship Projects
-    {
-      title: 'Social Media Analytics Dashboard',
-      description: 'Developed an automated social media analytics dashboard using Streamlit and Python, implementing computer vision (YOLO) and Regex to detect sponsor mentions and improve partnership ROI tracking.',
-      technologies: ['Python', 'Streamlit', 'YOLO', 'Computer Vision', 'Regex', 'Data Analytics'],
-      category: 'internship',
-      images: ['assets/images/RS1.png', 'assets/images/RS2.png', 'assets/images/RS3.png']
-    },
-    {
-      title: 'Esports Analytics Mobile App',
-      description: 'Built a cross-platform mobile app in React Native integrating Valorant Data for real-time player analytics, enabling data-driven coaching decisions.',
-      technologies: ['React Native', 'API', 'Data Visualization', 'Mobile Development'],
-      category: 'internship',
-      images: ['assets/images/Valo1.jpeg', 'assets/images/Valo2.jpeg', 'assets/images/Valo3.jpeg', 'assets/images/Valo4.jpeg']
-    },
-    {
-      title: 'Jersey Flocking Tool',
-      description: 'Developed a web application for customizing M8 esports jerseys by adding player names and numbers to PDF templates. Features real-time preview, individual/bulk processing via CSV upload, Google Drive integration, and high-resolution export capabilities.',
-      technologies: ['Web Development', 'PDF Processing', 'Google Drive API', 'CSV Processing'],
-      category: 'internship',
-      images: ['assets/images/jersey.png']
-    },
-    // Academic & Personal Projects
     {
       title: 'Transformer Architectures & NLP',
       description: 'Researched transformer architectures and attention mechanisms. Built sentiment analysis model using CamemBERT achieving 95.91% accuracy on French movie reviews.',
@@ -75,6 +52,13 @@ const Projects: React.FC = () => {
       category: 'academic',
       downloadUrl: 'assets/documents/Rapport___Transformers (2).pdf',
       images: ['assets/images/transformers.png']
+    },
+    {
+      title: 'Social Media Analytics Dashboard',
+      description: 'Developed an automated social media analytics dashboard using Streamlit and Python, implementing computer vision (YOLO) and Regex to detect sponsor mentions and improve partnership ROI tracking.',
+      technologies: ['Python', 'Streamlit', 'YOLO', 'Computer Vision', 'Regex', 'Data Analytics'],
+      category: 'internship',
+      images: ['assets/images/RS1.png', 'assets/images/RS2.png', 'assets/images/RS3.png']
     },
     {
       title: 'YouTube Sentiment Analyzer',
@@ -85,14 +69,6 @@ const Projects: React.FC = () => {
       images: ['assets/images/Demo1.png', 'assets/images/Demo2.png', 'assets/images/Demo3.png']
     },
     {
-      title: 'Ant Colony Optimization',
-      description: 'Implemented ant colony optimization algorithm for shortest path problem. Developed interactive visualization with Tkinter displaying real-time pathfinding.',
-      technologies: ['Python', 'Algorithm Design', 'Tkinter', 'Optimization', 'Data Structures'],
-      category: 'academic',
-      githubUrl: 'https://github.com/anastber/ant-colony-optimization',
-      images: ['assets/images/ant-colony.png']
-    },
-    {
       title: 'House Price Prediction',
       description: 'Applied feature engineering to create composite features. Tested Linear Regression, Ridge, Lasso, and Random Forest models on the Ames Housing dataset.',
       technologies: ['Python', 'Scikit-learn', 'Pandas', 'Machine Learning', 'Feature Engineering'],
@@ -101,20 +77,37 @@ const Projects: React.FC = () => {
       icon: '🏘️'
     },
     {
+      title: 'Esports Analytics Mobile App',
+      description: 'Built a cross-platform mobile app in React Native integrating Valorant Data for real-time player analytics, enabling data-driven coaching decisions.',
+      technologies: ['React Native', 'API', 'Data Visualization', 'Mobile Development'],
+      category: 'internship',
+      images: ['assets/images/Valo1.jpeg', 'assets/images/Valo2.jpeg', 'assets/images/Valo3.jpeg', 'assets/images/Valo4.jpeg']
+    },
+    {
+      title: 'Ant Colony Optimization',
+      description: 'Implemented ant colony optimization algorithm for shortest path problem. Developed interactive visualization with Tkinter displaying real-time pathfinding.',
+      technologies: ['Python', 'Algorithm Design', 'Tkinter', 'Optimization', 'Data Structures'],
+      category: 'academic',
+      githubUrl: 'https://github.com/anastber/ant-colony-optimization',
+      images: ['assets/images/ant-colony.png']
+    },
+    {
+      title: 'Jersey Flocking Tool',
+      description: 'Developed a web application for customizing M8 esports jerseys by adding player names and numbers to PDF templates. Features real-time preview, individual/bulk processing via CSV upload, Google Drive integration, and high-resolution export capabilities.',
+      technologies: ['Web Development', 'PDF Processing', 'Google Drive API', 'CSV Processing'],
+      category: 'internship',
+      images: ['assets/images/jersey.png']
+    },
+    {
       title: '2048 Game',
       description: 'This project is a C++ 2048 clone built with Qt and QML. It faithfully reproduces the original gameplay without ads and adds extra features for a better user experience.',
       technologies: ['C++', 'Qt', 'QML', 'Game Development', 'UI/UX'],
-      category: 'personal',
+      category: 'academic',
       githubUrl: 'https://github.com/anastber/2048-game',
       images: ['assets/images/2048.png', 'assets/images/2048_1.png']
     }
   ];
 
-  const groupedProjects = {
-    internship: projects.filter(p => p.category === 'internship'),
-    academic: projects.filter(p => p.category === 'academic'),
-    personal: projects.filter(p => p.category === 'personal')
-  };
 
   const renderProject = (project: Project, index: number) => (
     <div key={index} className="project-card fade-in-up">
@@ -149,7 +142,13 @@ const Projects: React.FC = () => {
       </div>
 
       <div className="project-content">
-        <h3 className="project-title">{project.title}</h3>
+        <div className="project-header">
+          <h3 className="project-title">{project.title}</h3>
+          <span className={`project-category-tag ${project.category}`}>
+            {project.category === 'internship' ? 'Internship' : 
+             project.category === 'academic' ? 'Academic' : 'Personal'}
+          </span>
+        </div>
         <p className="project-description">{project.description}</p>
 
         <div className="project-technologies">
@@ -200,31 +199,11 @@ const Projects: React.FC = () => {
     <section id="projects" className="projects-section section">
       <div className="container">
         <h2 className="section-title">
-          <span className="code-text">const projects = [</span>
-          <span className="gradient-text">myWork</span>
-          <span className="code-text">]</span>
+          <span className="gradient-text">My Projects</span>
         </h2>
 
-        {/* Internship Projects */}
-        <div className="projects-category">
-          <h3 className="category-title">
-            <i className="fas fa-briefcase"></i>
-            Internship Projects
-          </h3>
-          <div className="projects-grid">
-            {groupedProjects.internship.map(renderProject)}
-          </div>
-        </div>
-
-        {/* Academic & Personal Projects */}
-        <div className="projects-category">
-          <h3 className="category-title">
-            <i className="fas fa-graduation-cap"></i>
-            Academic & Personal Projects
-          </h3>
-          <div className="projects-grid">
-            {[...groupedProjects.academic, ...groupedProjects.personal].map(renderProject)}
-          </div>
+        <div className="projects-grid">
+          {projects.map(renderProject)}
         </div>
 
         {/* Image Modal */}

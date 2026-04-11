@@ -36,9 +36,7 @@ const Experience: React.FC = () => {
     <section id="experience" className="experience-section section">
       <div className="container">
         <h2 className="section-title">
-          <span className="code-text">experience = df.sort_values('</span>
-          <span className="gradient-text">date</span>
-          <span className="code-text">', ascending=False)</span>
+          <span className="gradient-text">Experience</span>
         </h2>
 
         <div className="experience-timeline">
