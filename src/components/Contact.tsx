@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
                   Send Message
                 </a>
                 <a
-                  href="assets/documents/CV_English_T_version.pdf"
+                  href="assets/documents/Resume-Anas-Tber.pdf"
                   download
                   className="btn btn-secondary"
                 >
