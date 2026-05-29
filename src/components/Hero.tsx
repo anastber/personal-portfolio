@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
               Get In Touch
             </a>
             <a
-              href="assets/documents/CV_English_T_version.pdf"
+              href="assets/documents/Resume-Anas-Tber.pdf"
               download
               className="btn btn-secondary"
             >
