@@ -3,9 +3,9 @@ import './About.scss';
 
 const About: React.FC = () => {
   const skills = {
-    languages: ['Python', 'TypeScript', 'JavaScript', 'SQL',],
-    tools: ['Git', 'Docker', 'PostgreSQL', 'MongoDB', 'Google Cloud'],
-    aiml: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV']
+    languages: ['Python', 'TypeScript', 'JavaScript', 'SQL'],
+    tools: ['Git', 'GitHub', 'GitLab', 'Docker', 'PostgreSQL', 'MongoDB', 'Google Cloud', 'Streamlit', 'Polars', 'PyArrow'],
+    aiml: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'LangChain', 'SHAP', 'LightGBM', 'NetworkX']
   };
 
   return (
@@ -19,14 +19,19 @@ const About: React.FC = () => {
           <div className="about-text">
             <div className="about-intro">
               <p>
-                I'm a passionate engineering student at <strong>Centrale Lyon</strong>, currently
-                working as a <strong>Data Scientist intern at BNP Paribas CIB</strong> until July 2026.
-                My journey in technology spans across AI, machine learning, and full-stack development.
+                I'm a passionate engineering student at <strong>Centrale Lyon</strong>, with hands-on
+                experience in machine learning, NLP, LLM applications, and large-scale data engineering.
+                I'm currently seeking an <strong>end-of-studies internship in Data Science or AI</strong>{' '}
+                starting March 2027.
               </p>
 
               <p>
-                With hands-on experience from my internships at <strong>Gentle Mates</strong> and <strong>BNP Paribas CIB</strong>, I've developed a strong foundation
-                in both theoretical knowledge and practical application of cutting-edge technologies.
+                I most recently completed a <strong>Data Scientist internship at BNP Paribas CIB</strong>,
+                where I built a regulator-approved, graph-based AML detection and investigation platform
+                on a 10M+ entity dataset — combining graph analytics, an Isolation Forest anomaly model
+                with SHAP explainability, and LLM-powered investigation features. Before that, at{' '}
+                <strong>Gentle Mates</strong>, I built computer vision and NLP-driven analytics tooling
+                for sponsor tracking and reporting.
               </p>
 
               <p>
@@ -43,7 +48,7 @@ const About: React.FC = () => {
               <div className="education-item">
                 <h4>Engineering Degree</h4>
                 <p>École Centrale de Lyon • 2023 - 2027</p>
-                <span className="status">Currently on gap year for internship</span>
+                <span className="status">Seeking end-of-studies internship, starting March 2027</span>
               </div>
             </div>
           </div>
