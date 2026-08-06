@@ -47,18 +47,11 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       title: 'Transformer Architectures & NLP',
-      description: 'Researched transformer architectures and attention mechanisms. Built sentiment analysis model using CamemBERT achieving 95.91% accuracy on French movie reviews.',
+      description: 'Studied attention mechanisms, Word2Vec/GloVe/BERT embeddings, and Transformer vs. Mamba (SSM) complexity trade-offs.',
       technologies: ['Python', 'Transformers', 'CamemBERT', 'NLP', 'BERT'],
       category: 'academic',
       downloadUrl: 'assets/documents/Rapport___Transformers (2).pdf',
       images: ['assets/images/transformers.png']
-    },
-    {
-      title: 'Social Media Analytics Dashboard',
-      description: 'Developed an automated social media analytics dashboard using Streamlit and Python, implementing computer vision (YOLO) and Regex to detect sponsor mentions and improve partnership ROI tracking.',
-      technologies: ['Python', 'Streamlit', 'YOLO', 'Computer Vision', 'Regex', 'Data Analytics'],
-      category: 'internship',
-      images: ['assets/images/RS1.png', 'assets/images/RS2.png', 'assets/images/RS3.png']
     },
     {
       title: 'YouTube Sentiment Analyzer',
@@ -72,16 +65,9 @@ const Projects: React.FC = () => {
       title: 'House Price Prediction',
       description: 'Applied feature engineering to create composite features. Tested Linear Regression, Ridge, Lasso, and Random Forest models on the Ames Housing dataset.',
       technologies: ['Python', 'Scikit-learn', 'Pandas', 'Machine Learning', 'Feature Engineering'],
-      category: 'academic',
+      category: 'personal',
       githubUrl: 'https://github.com/anastber/House-Prices-',
       icon: '🏘️'
-    },
-    {
-      title: 'Esports Analytics Mobile App',
-      description: 'Built a cross-platform mobile app in React Native integrating Valorant Data for real-time player analytics, enabling data-driven coaching decisions.',
-      technologies: ['React Native', 'API', 'Data Visualization', 'Mobile Development'],
-      category: 'internship',
-      images: ['assets/images/Valo1.jpeg', 'assets/images/Valo2.jpeg', 'assets/images/Valo3.jpeg', 'assets/images/Valo4.jpeg']
     },
     {
       title: 'Ant Colony Optimization',
@@ -90,13 +76,6 @@ const Projects: React.FC = () => {
       category: 'academic',
       githubUrl: 'https://github.com/anastber/ant-colony-optimization',
       images: ['assets/images/ant-colony.png']
-    },
-    {
-      title: 'Jersey Flocking Tool',
-      description: 'Developed a web application for customizing M8 esports jerseys by adding player names and numbers to PDF templates. Features real-time preview, individual/bulk processing via CSV upload, Google Drive integration, and high-resolution export capabilities.',
-      technologies: ['Web Development', 'PDF Processing', 'Google Drive API', 'CSV Processing'],
-      category: 'internship',
-      images: ['assets/images/jersey.png']
     },
     {
       title: '2048 Game',
