@@ -4,9 +4,9 @@ import './Hero.scss';
 
 const Hero: React.FC = () => {
   const roles = [
-    'Data Scientist Intern @ BNP Paribas CIB',
+    'Data Scientist @ BNP Paribas CIB (AML)',
     'Engineering Student @ Centrale Lyon',
-    'AI & Machine Learning Enthusiast',
+    'Seeking Data Science / AI Internship',
   ];
 
   const currentRole = useTypewriter({
@@ -41,9 +41,10 @@ const Hero: React.FC = () => {
           </div>
 
           <p className="hero-description">
-            Passionate engineering student at Centrale Lyon currently working as a Data Scientist intern
-            at BNP Paribas CIB (until July 2026). Experienced in AI, machine learning, and full-stack
-            development.
+            Engineering student at Centrale Lyon with hands-on experience in ML, NLP, LLM applications,
+            and large-scale data engineering. Recently completed a Data Scientist internship at BNP
+            Paribas CIB building a graph-based AML detection platform, and now seeking an end-of-studies
+            internship in Data Science or AI starting March 2027.
           </p>
 
           <div className="hero-actions">
