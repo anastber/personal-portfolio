@@ -5,19 +5,25 @@ const Experience: React.FC = () => {
   const experiences = [
     {
       title: 'Data Scientist Intern',
-      company: 'BNP Paribas CIB',
-      period: 'Present - July 2026',
+      company: 'BNP Paribas CIB — Compliance, Anti-Money Laundering (AML)',
+      period: 'January 2026 - July 2026',
       location: 'Paris, France',
       description: '',
-      technologies: ['Python', 'Machine Learning', 'Graph Theory', 'Data Analysis', 'NumPy', 'Pandas', 'PyViz'],
-      current: true
+      bullets: [
+        'Built a regulator-approved AML detection platform on a 10M+ entity dataset, from data ingestion to compliance dashboards.',
+        'Designed a graph-based detection layer (centrality, cycle detection) paired with an Isolation Forest + SHAP model to rank suspicious activity.',
+        'Added LLM-powered risk summaries and an investigation chatbot to the app.',
+        'Sole owner of the repository — led the refactor and wrote the documentation for handover to IT.'
+      ],
+      technologies: ['Python', 'Polars', 'PyArrow', 'NetworkX', 'Graph Theory', 'Isolation Forest', 'SHAP', 'LLM / Prompt Engineering', 'Streamlit'],
+      current: false
     },
     {
       title: 'Tech and Operations Intern',
       company: 'Gentle Mates',
-      period: '2025',
-      location: 'France',
-      description: 'Designed and enhanced innovative internal Tech Tools leveraging web and mobile technologies, computer vision, and AI to optimize internal processes.',
+      period: 'April 2025 - November 2025',
+      location: 'Paris, France',
+      description: 'Built a social media analytics dashboard combining computer vision and NLP to track sponsor visibility, and contributed to internal software and AI tools for analytics and operations.',
       technologies: ['React Native', 'Computer Vision', 'Python', 'AI/ML', 'Web Development'],
       current: false
     },
@@ -68,7 +74,15 @@ const Experience: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="experience-description">{exp.description}</p>
+                {exp.bullets ? (
+                  <ul className="experience-bullets">
+                    {exp.bullets.map((bullet, bulletIndex) => (
+                      <li key={bulletIndex}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="experience-description">{exp.description}</p>
+                )}
 
                 <div className="experience-technologies">
                   {exp.technologies.map((tech, techIndex) => (
