@@ -51,6 +51,7 @@ const Projects: React.FC = () => {
       technologies: ['Python', 'scikit-learn', 'TypeScript', 'Next.js', 'MediaPipe', 'Machine Learning', 'Tone.js'],
       category: 'personal',
       githubUrl: 'https://github.com/anastber/air-keys',
+      liveUrl: 'https://air-keys-delta.vercel.app/',
       icon: '🎹'
     },
     {
