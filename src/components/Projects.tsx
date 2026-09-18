@@ -55,14 +55,6 @@ const Projects: React.FC = () => {
       icon: '🎹'
     },
     {
-      title: 'Transformer Architectures & NLP',
-      description: 'Studied attention mechanisms, Word2Vec/GloVe/BERT embeddings, and Transformer vs. Mamba (SSM) complexity trade-offs.',
-      technologies: ['Python', 'Transformers', 'CamemBERT', 'NLP', 'BERT'],
-      category: 'academic',
-      downloadUrl: 'assets/documents/Rapport___Transformers (2).pdf',
-      images: ['assets/images/transformers.png']
-    },
-    {
       title: 'YouTube Sentiment Analyzer',
       description: 'YouTube Sentiment Analysis web app built with Streamlit, Hugging Face Transformers (RoBERTa & BERT), YouTube Data API v3, and Plotly visualizations.',
       technologies: ['Python', 'Streamlit', 'Hugging Face', 'RoBERTa', 'BERT', 'YouTube API', 'Plotly'],
@@ -85,6 +77,14 @@ const Projects: React.FC = () => {
       category: 'academic',
       githubUrl: 'https://github.com/anastber/ant-colony-optimization',
       images: ['assets/images/ant-colony.png']
+    },
+    {
+      title: 'Transformer Architectures & NLP',
+      description: 'Studied attention mechanisms, Word2Vec/GloVe/BERT embeddings, and Transformer vs. Mamba (SSM) complexity trade-offs.',
+      technologies: ['Python', 'Transformers', 'CamemBERT', 'NLP', 'BERT'],
+      category: 'academic',
+      downloadUrl: 'assets/documents/Rapport___Transformers (2).pdf',
+      images: ['assets/images/transformers.png']
     },
     {
       title: '2048 Game',
