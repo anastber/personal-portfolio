@@ -4,7 +4,7 @@ import './About.scss';
 const About: React.FC = () => {
   const skills = {
     languages: ['Python', 'TypeScript', 'JavaScript', 'SQL'],
-    tools: ['Git', 'GitHub', 'GitLab', 'Docker', 'PostgreSQL', 'MongoDB', 'Google Cloud', 'Streamlit', 'Polars', 'PyArrow'],
+    tools: ['Git', 'GitHub', 'GitLab', 'Streamlit', 'Polars', 'PyArrow'],
     aiml: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'LangChain', 'SHAP', 'LightGBM', 'NetworkX']
   };
 

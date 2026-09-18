@@ -46,6 +46,14 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
+      title: 'AirKeys — Camera-Based Gesture Instrument',
+      description: 'Camera-based gesture instrument: a self-trained neural network (scikit-learn) classifies hand poses alongside MediaPipe\'s pretrained hand-tracking, with live gesture personalization via k-nearest-neighbors, turning gestures into music entirely client-side in the browser.',
+      technologies: ['Python', 'scikit-learn', 'TypeScript', 'Next.js', 'MediaPipe', 'Machine Learning', 'Tone.js'],
+      category: 'personal',
+      githubUrl: 'https://github.com/anastber/air-keys',
+      icon: '🎹'
+    },
+    {
       title: 'Transformer Architectures & NLP',
       description: 'Studied attention mechanisms, Word2Vec/GloVe/BERT embeddings, and Transformer vs. Mamba (SSM) complexity trade-offs.',
       technologies: ['Python', 'Transformers', 'CamemBERT', 'NLP', 'BERT'],
