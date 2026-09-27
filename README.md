@@ -19,12 +19,6 @@ Welcome to my personal portfolio. I'm Anas, a data science and software engineer
 - **Smooth Navigation** - Single-page application with anchor-based routing
 - **Performance Optimized** - Fast loading with Vite build system
 
-## 📂 Featured Projects
-
-- **Data-Driven Portfolio Website** - React + TypeScript portfolio with analytics and modern design
-- **Interactive Experience Timeline** - Animated timeline showcasing data science and development journey
-- **Responsive Data Visualization Components** - Reusable SCSS components with theme support
-- **SEO-Optimized Analytics Dashboard** - Single-page application with proper search engine indexing
 
 ## 🌐 Live Site
 
