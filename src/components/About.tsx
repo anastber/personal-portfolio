@@ -3,9 +3,9 @@ import './About.scss';
 
 const About: React.FC = () => {
   const skills = {
-    languages: ['Python', 'TypeScript', 'JavaScript', 'SQL'],
-    tools: ['Git', 'GitHub', 'GitLab', 'Streamlit', 'Polars', 'PyArrow'],
-    aiml: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'LangChain', 'SHAP', 'LightGBM', 'NetworkX']
+    languages: ['Python', 'JavaScript', 'TypeScript', 'SQL'],
+    tools: ['Git', 'GitHub', 'GitLab', 'Streamlit', 'FastAPI', 'Polars', 'PyArrow', 'Plotly', 'Jupyter'],
+    aiml: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'LangChain', 'SHAP', 'LightGBM', 'NetworkX', 'Transformers', 'FAISS', 'YOLO', 'RAG']
   };
 
   return (
@@ -48,6 +48,7 @@ const About: React.FC = () => {
               <div className="education-item">
                 <h4>Engineering Degree</h4>
                 <p>École Centrale de Lyon • 2023 - 2027</p>
+                <p className="courses">Courses: Applied Statistics for Data Science, Machine Learning, Bayesian Learning &amp; Text Mining, Big Data Technologies, Deep Learning, Computer Vision, Probability &amp; Stochastic Processes</p>
                 <span className="status">Seeking end-of-studies internship, starting March 2027</span>
               </div>
             </div>

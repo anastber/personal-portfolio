@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
     {
       icon: 'fas fa-map-marker-alt',
       label: 'Location',
-      value: 'Paris, France',
+      value: 'Lyon, France',
       link: null,
     },
   ];

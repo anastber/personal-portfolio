@@ -8,7 +8,7 @@ const Experience: React.FC = () => {
       company: 'BNP Paribas CIB — Compliance, Anti-Money Laundering (AML)',
       period: 'January 2026 - July 2026',
       location: 'Paris, France',
-      description: 'Built a regulator-approved, network-based AML detection and investigation platform for a 10M+ entity dataset — graph analytics feeding an Isolation Forest + SHAP model, with LLM-powered risk summaries and an investigation chatbot shipped into a Streamlit app.',
+      description: 'Delivered a regulator-approved, network-based AML detection and investigation platform on a 10M+ entity / 40M+ transaction dataset, with a Polars/PyArrow lazy pipeline. Cycle detection (SCC + DFS) surfaces money-mule rings, and an Isolation Forest with SHAP ranks suspicious communities with regulator-facing justifications. Shipped LLM-powered AI risk summaries and a multi-turn investigation chatbot into the Streamlit app. Sole owner of the repository: led the refactor and wrote the full technical documentation for handover to the IT team.',
       technologies: ['Python', 'Polars', 'PyArrow', 'NetworkX', 'Graph Theory', 'Isolation Forest', 'SHAP', 'LLM / Prompt Engineering', 'Streamlit'],
       current: false
     },
@@ -17,8 +17,8 @@ const Experience: React.FC = () => {
       company: 'Gentle Mates',
       period: 'April 2025 - November 2025',
       location: 'Paris, France',
-      description: 'Built a social media analytics dashboard combining computer vision and NLP to track sponsor visibility, and contributed to internal software and AI tools for analytics and operations.',
-      technologies: ['Computer Vision', 'Python', 'AI/ML', 'Web Development'],
+      description: 'Built an automated social media analytics dashboard (Streamlit/Python) combining computer vision (YOLO) for sponsor logo detection and NLP/Regex for brand mention tracking, improving partnership ROI visibility. Trained a YOLO model on a custom-built dataset of sponsor logos, and contributed to internal software and AI tools for analytics, monitoring and operations.',
+      technologies: ['Python', 'YOLO', 'Computer Vision', 'NLP', 'Regex', 'Streamlit'],
       current: false
     },
     {

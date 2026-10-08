@@ -47,12 +47,20 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       title: 'AirKeys — Camera-Based Gesture Instrument',
-      description: 'Camera-based gesture instrument: a self-trained neural network (scikit-learn) classifies hand poses alongside MediaPipe\'s pretrained hand-tracking, with live gesture personalization via k-nearest-neighbors, turning gestures into music entirely client-side in the browser.',
-      technologies: ['Python', 'scikit-learn', 'TypeScript', 'Next.js', 'MediaPipe', 'Machine Learning', 'Tone.js'],
+      description: 'Hand gesture recognition combining MediaPipe\'s pretrained landmark model with a self-trained MLP classifier (scikit-learn, benchmarked against Random Forest) on a self-collected, hand-labeled dataset, reaching 99.8% held-out accuracy. Users can teach new gestures live via a from-scratch k-nearest-neighbors classifier, with no retraining and entirely client-side.',
+      technologies: ['Python', 'scikit-learn', 'MLP', 'MediaPipe', 'k-NN', 'TypeScript', 'Next.js', 'Tone.js'],
       category: 'personal',
       githubUrl: 'https://github.com/anastber/air-keys',
       liveUrl: 'https://air-keys-delta.vercel.app/',
       icon: '🎹'
+    },
+    {
+      title: 'arXiv Research Radar — RAG over Recent Papers',
+      description: 'End-to-end RAG system answering questions over the latest arXiv papers with per-claim citations: PDF ingestion, section-aware chunking, Sentence-Transformers embeddings with FAISS search, and Gemini answers grounded only in retrieved sources (prompt-injection guard). Served via FastAPI + Streamlit with cost controls (per-IP rate limiting, atomic SQLite daily cap, relevance threshold), and refreshed weekly by a GitHub Actions pipeline.',
+      technologies: ['Python', 'RAG', 'FAISS', 'Sentence-Transformers', 'Gemini', 'FastAPI', 'Streamlit', 'GitHub Actions'],
+      category: 'personal',
+      githubUrl: 'https://github.com/anastber/arxiv-research-radar',
+      icon: '📡'
     },
     {
       title: 'YouTube Sentiment Analyzer',

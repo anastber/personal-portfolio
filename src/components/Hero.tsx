@@ -4,8 +4,8 @@ import './Hero.scss';
 
 const Hero: React.FC = () => {
   const roles = [
-    'Data Scientist @ BNP Paribas CIB (AML)',
-    'Engineering Student @ Centrale Lyon',
+    'Data Science & AI Engineering Student @ Centrale Lyon',
+    'Ex-Data Scientist Intern @ BNP Paribas CIB (AML)',
     'Seeking Data Science / AI Internship',
   ];
 
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
 
           <div className="hero-location">
             <i className="fas fa-map-marker-alt"></i>
-            <span>Paris, France</span>
+            <span>Lyon, France</span>
           </div>
 
           <p className="hero-description">
