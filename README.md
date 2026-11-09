@@ -1,23 +1,23 @@
 # Anas's Portfolio 🚀
 
-Welcome to my personal portfolio. I'm Anas, a data science and software engineering student with a passion for extracting insights from data and creating innovative web solutions. I focus on machine learning, statistical analysis, and data visualization while also exploring modern frontend technologies. This portfolio showcases my journey, projects, and skills, deployed on Vercel with a custom domain.
+Welcome to my personal portfolio. I'm Anas, a final-year engineering student at Centrale Lyon focused on software and AI engineering. I build the software around machine learning, from data pipelines and services to the models themselves, and I'm heading toward ML and AI engineering. This portfolio showcases my experience, projects, and current work, deployed on Vercel with a custom domain.
 
 ## 🔧 Technologies & Tools
 
-**Languages:** TypeScript, JavaScript, Python, R  
-**Data Science:** Machine Learning, Statistical Analysis, Data Visualization  
-**Frontend:** React, SCSS, HTML5, CSS3  
+**Languages:** TypeScript, Python, SQL  
+**Machine Learning:** ML systems, LLM applications, RAG, Computer Vision  
+**Frontend:** React 19, SCSS with CSS custom properties  
 **Build Tool:** Vite  
 **Deployment:** Vercel
 
 ## ✨ Features
 
-- **Dark/Light Theme Toggle** - Seamless theme switching with system preference detection
-- **Responsive Design** - Mobile-first approach with optimized layouts for all devices
-- **Interactive Animations** - Canvas-based particle background and smooth transitions
-- **Project Galleries** - Modal-based image viewing with navigation controls
-- **Smooth Navigation** - Single-page application with anchor-based routing
-- **Performance Optimized** - Fast loading with Vite build system
+- **Light/Dark Theme** - Follows the system preference, with a remembered manual toggle
+- **Centered Reading Layout** - Single content column with a sticky top navigation bar
+- **Text Animations** - Letter-by-letter name reveal, rotating tagline and scroll reveal
+- **Scroll-Spy Navigation** - The current section is highlighted in the menu
+- **Content in One File** - All copy lives in `src/data/content.ts`
+- **Accessible Motion** - Animations are disabled when reduced motion is requested
 
 
 ## 🌐 Live Site

@@ -4,7 +4,7 @@
 React + TypeScript portfolio website for Anas Tber, deployed on Vercel with custom domain at https://anastber.com
 
 ## Tech Stack
-- **Frontend**: React 18, TypeScript, Vite
+- **Frontend**: React 19, TypeScript, Vite
 - **Styling**: SCSS with CSS custom properties for theming
 - **Deployment**: Vercel
 - **Domain**: Custom domain (anastber.com)
@@ -51,7 +51,7 @@ src/
 - `npm run preview` - Preview production build
 
 ## SEO Setup
-- sitemap.xml - All sections mapped
+- sitemap.xml - Home and all sections mapped
 - robots.txt - Search engine guidelines
 - Google Search Console configured
 
