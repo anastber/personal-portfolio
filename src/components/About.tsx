@@ -25,10 +25,6 @@ const About: React.FC = () => {
         graph features to an Isolation Forest with SHAP explanations, and built the pipeline over 40M+ transactions and
         the LLM features investigators use every day.
       </p>
-      <p className="reveal">
-        Engineering is my core: clean code, solid pipelines, services that hold up. Modelling is what keeps me curious.
-        Bringing the two together is why I'm heading toward ML and AI engineering.
-      </p>
       <div className="education reveal">
         <b className="display">École Centrale de Lyon</b>
         <span className="entry-when">Engineering degree · 2023 – 2027</span>
