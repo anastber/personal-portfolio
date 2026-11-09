@@ -16,6 +16,7 @@ const Projects: React.FC = () => (
             </a>
           }
           description={project.description}
+          demo={project.demo}
           ongoing={project.ongoing}
           stack={project.stack}
         />

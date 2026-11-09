@@ -10,6 +10,7 @@ export interface Project {
   year: string;
   title: string;
   url: string;
+  demo?: string;
   description: string;
   ongoing?: string;
   stack: string[];
@@ -45,7 +46,7 @@ export const experiences: Experience[] = [
     title: 'Tech & Operations Intern',
     company: 'Gentle Mates',
     description:
-      'Trained a YOLO logo detector on a dataset I built myself, then built the analytics tool around it, with NLP brand-mention tracking and a dashboard on top.',
+      'Trained a YOLO logo detector on a dataset I built myself, then built the analytics tool around it, with NLP brand-mention tracking and a dashboard on top. Contributed to the development of other impactful software and AI internal tools for analytics, monitoring, and operations',
     stack: ['YOLO', 'Computer Vision', 'NLP'],
   },
   {
@@ -61,23 +62,24 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     year: '2026',
-    title: 'arXiv Research Radar',
-    url: 'https://github.com/anastber/arxiv-research-radar',
-    description:
-      'A RAG service built like a product: section-aware chunking and FAISS retrieval with a relevance threshold, a citation for every claim, and a FastAPI backend with rate limiting, a daily cost cap and a weekly ingestion pipeline in CI.',
-    ongoing:
-      'Building an evaluation framework: a frozen benchmark of 437 papers and a hand-reviewed question set to measure retrieval and answer quality, before improving retrieval with hybrid search and reranking.',
-    stack: ['RAG', 'FAISS', 'FastAPI', 'GitHub Actions'],
-  },
-  {
-    year: '2026',
     title: 'AirKeys',
     url: 'https://github.com/anastber/air-keys',
+    demo: 'https://air-keys-delta.vercel.app/',
     description:
       'A gesture instrument that runs entirely in the browser, with new gestures taught live by a from-scratch k-NN. I re-evaluated the models on thousands of unseen hands from the public HaGRID dataset: a model trained on many people reaches 98% accuracy on people it never saw.',
     ongoing:
       "Teaching the model to ignore resting or half-formed hands so they don't play wrong notes, then calibrating its confidence and smoothing predictions over time.",
     stack: ['scikit-learn', 'MediaPipe', 'TypeScript', 'Next.js'],
+  },
+  {
+    year: '2026',
+    title: 'arXiv Research Radar',
+    url: 'https://github.com/anastber/arxiv-research-radar',
+    description:
+      'A RAG service built like a product: section-aware chunking and FAISS retrieval with a relevance threshold, a citation for every claim, and a FastAPI backend with rate limiting, a daily cost cap and a weekly ingestion pipeline in CI.',
+    ongoing:
+      'Building an evaluation framework to measure retrieval and answer quality, before improving retrieval with hybrid search and reranking.',
+    stack: ['RAG', 'FAISS', 'FastAPI', 'GitHub Actions'],
   },
   {
     year: '2025',
