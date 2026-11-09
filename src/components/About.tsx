@@ -1,99 +1,37 @@
 import React from 'react';
-import './About.scss';
+
+const words = (text: string, offset: number) =>
+  text.split(' ').map((word, i) => (
+    <React.Fragment key={offset + i}>
+      <span className="word" style={{ '--i': offset + i } as React.CSSProperties}>{word}</span>{' '}
+    </React.Fragment>
+  ));
+
+const LEAD = 'I build the software around machine learning, and I like staying close to the models themselves,';
+const HIGHLIGHT = 'from the first experiment to production.';
 
 const About: React.FC = () => {
-  const skills = {
-    languages: ['Python', 'JavaScript', 'TypeScript', 'SQL'],
-    tools: ['Git', 'GitHub', 'GitLab', 'Streamlit', 'FastAPI', 'Polars', 'PyArrow', 'Plotly', 'Jupyter'],
-    aiml: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'LangChain', 'SHAP', 'LightGBM', 'NetworkX', 'Transformers', 'FAISS', 'YOLO', 'RAG']
-  };
-
+  const leadCount = LEAD.split(' ').length;
   return (
-    <section id="about" className="about-section section">
-      <div className="container">
-        <h2 className="section-title">
-          <span className="gradient-text">About Me</span>
-        </h2>
-
-        <div className="about-content">
-          <div className="about-text">
-            <div className="about-intro">
-              <p>
-                I'm a passionate engineering student at <strong>Centrale Lyon</strong>, with hands-on
-                experience in machine learning, NLP, LLM applications, and large-scale data engineering.
-                I'm currently seeking an <strong>end-of-studies internship in Data Science or AI</strong>{' '}
-                starting March 2027.
-              </p>
-
-              <p>
-                I most recently completed a <strong>Data Scientist internship at BNP Paribas CIB</strong>,
-                where I built a regulator-approved, graph-based AML detection and investigation platform
-                on a 10M+ entity dataset — combining graph analytics, an Isolation Forest anomaly model
-                with SHAP explainability, and LLM-powered investigation features. Before that, at{' '}
-                <strong>Gentle Mates</strong>, I built computer vision and NLP-driven analytics tooling
-                for sponsor tracking and reporting.
-              </p>
-
-              <p>
-                I thrive on solving complex problems through innovative solutions, and creating
-                AI-powered systems that make a real-world impact.
-              </p>
-            </div>
-
-            <div className="education">
-              <h3>
-                <i className="fas fa-graduation-cap"></i>
-                Education
-              </h3>
-              <div className="education-item">
-                <h4>Engineering Degree</h4>
-                <p>École Centrale de Lyon • 2023 - 2027</p>
-                <p className="courses">Courses: Applied Statistics for Data Science, Machine Learning, Bayesian Learning &amp; Text Mining, Big Data Technologies, Deep Learning, Computer Vision, Probability &amp; Stochastic Processes</p>
-                <span className="status">Seeking end-of-studies internship, starting March 2027</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="skills-section">
-            <h3>
-              <i className="fas fa-code"></i>
-              Technical Skills
-            </h3>
-
-            <div className="skills-grid">
-              <div className="skill-category">
-                <h4>Languages</h4>
-                <div className="skill-tags">
-                  {skills.languages.map((skill, index) => (
-                    <span key={index} className="skill-tag">{skill}</span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="skill-category">
-                <h4>Tools & Technologies</h4>
-                <div className="skill-tags">
-                  {skills.tools.map((skill, index) => (
-                    <span key={index} className="skill-tag">{skill}</span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="skill-category">
-                <h4>AI & Machine Learning</h4>
-                <div className="skill-tags">
-                  {skills.aiml.map((skill, index) => (
-                    <span key={index} className="skill-tag">{skill}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="about-footer">
-          <span className="code-text">    """Data Scientist & AI Engineer"""</span>
-        </div>
+    <section id="about" className="section">
+      <h2 className="section-label">About</h2>
+      <p className="lead display">
+        {words(LEAD, 0)}
+        <mark>{words(HIGHLIGHT, leadCount)}</mark>
+      </p>
+      <p className="reveal">
+        I'm a final-year engineering student at <strong>Centrale Lyon</strong>. At <strong>BNP Paribas CIB</strong> I
+        owned a regulator-approved anti-money-laundering platform end to end: I designed the detection approach, from
+        graph features to an Isolation Forest with SHAP explanations, and built the pipeline over 40M+ transactions and
+        the LLM features investigators use every day.
+      </p>
+      <p className="reveal">
+        Engineering is my core: clean code, solid pipelines, services that hold up. Modelling is what keeps me curious.
+        Bringing the two together is why I'm heading toward ML and AI engineering.
+      </p>
+      <div className="education reveal">
+        <b className="display">École Centrale de Lyon</b>
+        <span className="entry-when">Engineering degree · 2023 – 2027</span>
       </div>
     </section>
   );

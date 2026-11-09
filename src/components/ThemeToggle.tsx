@@ -1,23 +1,22 @@
 import React from 'react';
-import './ThemeToggle.scss';
+import type { Theme } from '../hooks/useTheme';
 
 interface ThemeToggleProps {
-  theme: 'dark' | 'light';
+  theme: Theme;
   onToggle: () => void;
 }
 
 const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, onToggle }) => {
+  const isDark = theme === 'dark';
   return (
-    <button 
+    <button
+      type="button"
       className="theme-toggle"
       onClick={onToggle}
-      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
-      <div className={`toggle-track ${theme}`}>
-        <div className="toggle-thumb">
-          <i className={`fas ${theme === 'dark' ? 'fa-moon' : 'fa-sun'}`} />
-        </div>
-      </div>
+      <span className="theme-toggle-icon" aria-hidden="true">{isDark ? '☀' : '☾'}</span>
+      <span>{isDark ? 'Light' : 'Dark'}</span>
     </button>
   );
 };
