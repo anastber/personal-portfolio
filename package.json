@@ -1,28 +1,25 @@
 {
   "name": "personal-portfolio",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "description": "Personal portfolio of Anas Tber, deployed at anastber.com",
+  "author": "Anas Tber",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "typescript": "^5.9.3"
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.3",
     "sass": "^1.97.3",
+    "typescript": "^5.9.3",
     "vite": "^7.3.1"
   }
 }
