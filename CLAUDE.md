@@ -10,7 +10,7 @@ React + TypeScript portfolio website for Anas Tber, deployed on Vercel with cust
 - **Domain**: Custom domain (anastber.com)
 
 ## Key Features
-- Two-column layout: sticky identity sidebar (name, rotating tagline, section nav, links, theme toggle) and scrolling content
+- Single centered reading column (`--column`) with wide empty margins; sticky top bar with centered section nav, name (after scroll) and theme toggle
 - Light/dark theme following the system, with a persisted manual toggle
 - Scroll-spy navigation, scroll reveal and subtle text animations (respects reduced motion)
 - Typography: Fraunces (display) + Figtree (body)
@@ -19,7 +19,8 @@ React + TypeScript portfolio website for Anas Tber, deployed on Vercel with cust
 ```
 src/
 ├── components/
-│   ├── Sidebar.tsx        # Sticky identity column + section nav
+│   ├── Header.tsx         # Sticky top bar: name, centered nav, theme toggle
+│   ├── Intro.tsx          # Name, rotating tagline, status, links
 │   ├── RotatingWords.tsx  # Animated tagline words
 │   ├── ThemeToggle.tsx    # Light/dark switch
 │   ├── Entry.tsx          # Shared experience/project row
@@ -31,6 +32,7 @@ src/
 ├── hooks/
 │   ├── useTheme.ts
 │   ├── useActiveSection.ts # Scroll-spy
+│   ├── useScrolled.ts      # Header state after scroll
 │   └── useReveal.ts        # Reveal-on-scroll
 └── styles/
     ├── globals.scss        # Tokens (light/dark), base, layout, keyframes

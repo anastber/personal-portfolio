@@ -1,17 +1,6 @@
-.content {
-  padding-block: 64px 40px;
-  display: grid;
-  gap: 80px;
-  min-width: 0;
-
-  @media (max-width: 760px) {
-    padding-block: 32px 32px;
-    gap: 56px;
-  }
-}
-
 .section {
-  scroll-margin-top: 24px;
+  min-width: 0;
+  scroll-margin-top: 80px;
 
   @media (max-width: 760px) {
     scroll-margin-top: 64px;

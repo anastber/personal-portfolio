@@ -16,7 +16,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, onToggle }) => {
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       <span className="theme-toggle-icon" aria-hidden="true">{isDark ? '☀' : '☾'}</span>
-      <span>{isDark ? 'Light' : 'Dark'}</span>
+      <span className="theme-toggle-label">{isDark ? 'Light' : 'Dark'}</span>
     </button>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
-import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import Intro from './components/Intro';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -19,16 +20,17 @@ const App: React.FC = () => {
   useReveal();
 
   return (
-    <div className="layout">
-      <Sidebar activeSection={activeSection} theme={theme} onThemeToggle={toggleTheme} />
-      <main className="content">
+    <>
+      <Header activeSection={activeSection} theme={theme} onThemeToggle={toggleTheme} />
+      <main className="page">
+        <Intro />
         <About />
         <Experience />
         <Projects />
         <Contact />
         <footer className="footer">© {new Date().getFullYear()} Anas Tber</footer>
       </main>
-    </div>
+    </>
   );
 };
 
