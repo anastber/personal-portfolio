@@ -11,14 +11,24 @@ interface HeaderProps {
   onThemeToggle: () => void;
 }
 
+const NAME = 'Anas Tber';
+
 const Header: React.FC<HeaderProps> = ({ activeSection, theme, onThemeToggle }) => {
   const scrolled = useScrolled(150);
 
   return (
     <header className={`header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="header-inner">
-        <a className="header-logo display" href="#top" tabIndex={scrolled ? 0 : -1}>
-          Anas Tber
+        <a className="header-logo" href="#top" aria-label="Anas Tber, back to top">
+          {[...NAME].map((char, i) =>
+            char === ' ' ? (
+              <span key={i} className="space" />
+            ) : (
+              <span key={i} className="char" style={{ '--i': i } as React.CSSProperties} aria-hidden="true">
+                {char}
+              </span>
+            )
+          )}
         </a>
         <nav className="header-nav" aria-label="Sections">
           {sections.map(({ id, label }) => (

@@ -10,35 +10,14 @@
   }
 }
 
-.intro-name {
-  font-size: 68px;
-  line-height: 1;
-  margin: 0;
-
-  .char {
-    display: inline-block;
-    animation: rise 0.7s var(--ease-out) both;
-    animation-delay: calc(var(--i) * 38ms + 80ms);
-  }
-
-  .space {
-    display: inline-block;
-    width: 0.28em;
-  }
-
-  @media (max-width: 760px) {
-    font-size: 48px;
-  }
-}
-
 .intro-role {
-  font-size: 26px;
-  line-height: 1.35;
+  font-size: 34px;
+  line-height: 1.3;
   margin: 0;
-  animation: fade-up 0.8s 0.55s both;
+  animation: fade-up 0.8s 0.4s both;
 
   @media (max-width: 760px) {
-    font-size: 21px;
+    font-size: 25px;
   }
 }
 
