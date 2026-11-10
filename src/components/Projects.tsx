@@ -1,5 +1,6 @@
 import React from 'react';
 import Entry from './Entry';
+import { ArrowUpRight } from './Icons';
 import { projects } from '../data/content';
 
 const Projects: React.FC = () => (
@@ -12,7 +13,7 @@ const Projects: React.FC = () => (
           when={project.year}
           title={
             <a href={project.url} target="_blank" rel="noopener noreferrer">
-              {project.title} <span className="entry-arrow" aria-hidden="true">↗</span>
+              {project.title} <ArrowUpRight className="entry-arrow" />
             </a>
           }
           description={project.description}

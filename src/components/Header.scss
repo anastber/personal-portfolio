@@ -148,8 +148,12 @@
     place-items: center;
     background: var(--highlight);
     color: var(--accent);
-    font-size: 12px;
     transition: transform 0.5s var(--ease-out);
+
+    .icon {
+      width: 12px;
+      height: 12px;
+    }
   }
 
   &:hover &-icon {

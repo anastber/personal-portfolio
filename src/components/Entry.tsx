@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowUpRight } from './Icons';
 
 interface EntryProps {
   when: string;
@@ -17,7 +18,7 @@ const Entry: React.FC<EntryProps> = ({ when, title, description, demo, ongoing, 
       <p className="entry-text">{description}</p>
       {demo && (
         <a className="entry-demo" href={demo} target="_blank" rel="noopener noreferrer">
-          Try the live demo <span aria-hidden="true">↗</span>
+          Try the live demo <ArrowUpRight />
         </a>
       )}
       {ongoing && (

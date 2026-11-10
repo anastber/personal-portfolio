@@ -193,7 +193,9 @@
 }
 
 .entry-arrow {
-  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  vertical-align: 0.05em;
   color: var(--accent);
   transition: transform 0.35s var(--ease-out);
 
@@ -218,15 +220,17 @@
   background: linear-gradient(var(--accent), var(--accent)) 0 100% / 0 1.5px no-repeat;
   transition: background-size 0.35s;
 
-  span {
-    display: inline-block;
+  .icon {
+    width: 0.85em;
+    height: 0.85em;
+    vertical-align: -0.05em;
     transition: transform 0.35s var(--ease-out);
   }
 
   &:hover {
     background-size: 100% 1.5px;
 
-    span {
+    .icon {
       transform: translate(3px, -3px);
     }
   }

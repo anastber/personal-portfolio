@@ -1,4 +1,5 @@
 import React from 'react';
+import { Moon, Sun } from './Icons';
 import type { Theme } from '../hooks/useTheme';
 
 interface ThemeToggleProps {
@@ -15,7 +16,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, onToggle }) => {
       onClick={onToggle}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
-      <span className="theme-toggle-icon" aria-hidden="true">{isDark ? '☀' : '☾'}</span>
+      <span className="theme-toggle-icon" aria-hidden="true">{isDark ? <Sun /> : <Moon />}</span>
       <span className="theme-toggle-label">{isDark ? 'Light' : 'Dark'}</span>
     </button>
   );
