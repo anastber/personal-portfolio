@@ -6,7 +6,7 @@ import './Intro.scss';
 const Intro: React.FC = () => (
   <section className="intro" id="top">
     <h1 className="intro-role display">
-      I build <RotatingWords words={rotatingWords} />,
+      I build <RotatingWords words={rotatingWords} />
       <br />
       from the model to production.
     </h1>
