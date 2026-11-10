@@ -4,17 +4,21 @@ import { ArrowUpRight } from './Icons';
 interface EntryProps {
   when: string;
   title: React.ReactNode;
+  logo?: string;
   description: string;
   demo?: string;
   ongoing?: string;
   stack: string[];
 }
 
-const Entry: React.FC<EntryProps> = ({ when, title, description, demo, ongoing, stack }) => (
+const Entry: React.FC<EntryProps> = ({ when, title, logo, description, demo, ongoing, stack }) => (
   <article className="entry reveal">
     <div className="entry-when">{when}</div>
     <div>
-      <h3 className="entry-title display">{title}</h3>
+      <div className="entry-head">
+        {logo && <img className="logo-tile" src={logo} alt="" width={36} height={36} loading="lazy" />}
+        <h3 className="entry-title display">{title}</h3>
+      </div>
       <p className="entry-text">{description}</p>
       {demo && (
         <a className="entry-demo" href={demo} target="_blank" rel="noopener noreferrer">

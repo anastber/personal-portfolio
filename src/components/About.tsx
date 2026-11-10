@@ -1,4 +1,5 @@
 import React from 'react';
+import { links } from '../data/content';
 
 const words = (text: string, offset: number) =>
   text.split(' ').map((word, i) => (
@@ -26,7 +27,10 @@ const About: React.FC = () => {
         the LLM features investigators use every day.
       </p>
       <div className="education reveal">
-        <b className="display">École Centrale de Lyon</b>
+        <span className="education-name">
+          <img className="logo-tile" src={links.centraleLogo} alt="" width={36} height={36} />
+          <b className="display">École Centrale de Lyon</b>
+        </span>
         <span className="entry-when">Engineering degree · 2023 – 2027</span>
       </div>
     </section>

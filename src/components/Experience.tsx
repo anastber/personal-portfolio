@@ -10,6 +10,7 @@ const Experience: React.FC = () => (
         <Entry
           key={exp.company}
           when={exp.period}
+          logo={exp.logo}
           title={
             <>
               {exp.title} <span className="entry-company">· {exp.company}</span>

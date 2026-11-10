@@ -2,6 +2,7 @@ export interface Experience {
   period: string;
   title: string;
   company: string;
+  logo?: string;
   description: string;
   stack: string[];
 }
@@ -21,6 +22,7 @@ export const links = {
   github: 'https://github.com/anastber',
   linkedin: 'https://www.linkedin.com/in/anas-tber-99b994222/',
   resume: '/assets/documents/Resume-Anas-Tber.pdf',
+  centraleLogo: '/assets/logos/centrale-lyon.svg',
 };
 
 export const sections = [
@@ -37,6 +39,7 @@ export const experiences: Experience[] = [
     period: 'Jan – Jul 2026',
     title: 'Data Scientist Intern',
     company: 'BNP Paribas CIB',
+    logo: '/assets/logos/bnp-paribas.svg',
     description:
       'Designed and shipped a regulator-approved AML platform. On the modelling side, graph cycle detection and an Isolation Forest with SHAP explanations rank suspicious communities. On the engineering side, a lazy Polars/PyArrow pipeline over 40M+ transactions, plus LLM risk summaries and an investigation chatbot in the app. Sole owner of the codebase through the refactor and handover.',
     stack: ['Python', 'Polars', 'NetworkX', 'SHAP', 'LLMs', 'Streamlit'],
@@ -45,6 +48,7 @@ export const experiences: Experience[] = [
     period: 'Apr – Nov 2025',
     title: 'Tech & Operations Intern',
     company: 'Gentle Mates',
+    logo: '/assets/logos/gentle-mates.png',
     description:
       'Trained a YOLO logo detector on a dataset I built myself, then built the analytics tool around it, with NLP brand-mention tracking and a dashboard on top. Contributed to the development of other impactful software and AI internal tools for analytics, monitoring, and operations',
     stack: ['Python', 'YOLO', 'Computer Vision', 'APIs', 'Web Scraping', 'Supabase', 'React'],
@@ -53,6 +57,7 @@ export const experiences: Experience[] = [
     period: '2023 – 2025',
     title: 'Founding Engineer',
     company: 'FreyIA',
+    logo: '/assets/logos/freyia.png',
     description:
       'Built the full-stack platform, the PostgreSQL schema and the REST and WebSocket APIs for connected bins, taking an AI waste-sorting project to an award-winning startup.',
     stack: ['PostgreSQL', 'REST', 'WebSockets'],

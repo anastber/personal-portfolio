@@ -133,6 +133,30 @@
   }
 }
 
+.education-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+// Small emblem tile, logos kept in their original colors.
+.logo-tile {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  padding: 5px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: #fff;
+  object-fit: contain;
+}
+
+.entry-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .entries {
   display: grid;
 
