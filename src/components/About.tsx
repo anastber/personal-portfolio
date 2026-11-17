@@ -21,10 +21,10 @@ const About: React.FC = () => {
         <mark>{words(HIGHLIGHT, leadCount)}</mark>
       </p>
       <p className="reveal">
-        I'm a final-year engineering student at <strong>Centrale Lyon</strong>. At <strong>BNP Paribas CIB</strong> I
-        owned a regulator-approved anti-money-laundering platform end to end: I designed the detection approach, from
-        graph features to an Isolation Forest with SHAP explanations, and built the pipeline over 40M+ transactions and
-        the LLM features investigators use every day.
+        I'm a final-year engineering student at <strong>Centrale Lyon</strong>, with hands-on experience shipping and
+        evaluating LLM features in a production environment, building large-scale data pipelines and deploying
+        machine-learning models behind real applications. I'm most interested in applied AI, AI agents and backend
+        engineering.
       </p>
       <div className="education reveal">
         <span className="education-name">
