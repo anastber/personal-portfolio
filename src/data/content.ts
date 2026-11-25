@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
     company: 'Gentle Mates',
     logo: '/assets/logos/gentle-mates.png',
     description:
-      'Trained a YOLO logo detector on a dataset I built myself, then built the analytics tool around it, with NLP brand-mention tracking and a dashboard on top. Contributed to the development of other impactful software and AI internal tools for analytics, monitoring, and operations',
+      'Trained a YOLO logo detector on a dataset I built myself, then built the analytics tool around it, with NLP brand-mention tracking and a dashboard on top. Contributed to the development of other impactful software and AI internal tools for analytics, monitoring, and operations.',
     stack: ['Python', 'YOLO', 'Computer Vision', 'APIs', 'Web Scraping', 'Supabase', 'React'],
   },
   {
