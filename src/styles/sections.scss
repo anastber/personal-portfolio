@@ -328,30 +328,26 @@
   }
 }
 
-.contact-title {
-  font-size: clamp(30px, 4vw, 44px);
-  line-height: 1.1;
-  margin: 0 0 14px;
+.section .contact-text {
+  font-size: 24px;
+  line-height: 1.45;
+  max-width: 30em;
   color: var(--fg);
-}
 
-.section .contact-title {
-  color: var(--fg);
-}
+  a {
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    padding-bottom: 1px;
+    background: linear-gradient(var(--accent), var(--accent)) 0 100% / 100% 1.5px no-repeat;
+    transition: color 0.2s;
 
-.contact-mail {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  padding-bottom: 2px;
-  background: linear-gradient(var(--accent), var(--accent)) 0 100% / 100% 1.5px no-repeat;
-  transition: color 0.2s;
-  overflow-wrap: anywhere;
+    &:hover {
+      color: var(--accent);
+    }
+  }
 
-  &:hover {
-    color: var(--accent);
+  @media (max-width: 760px) {
+    font-size: 21px;
   }
 }
 
