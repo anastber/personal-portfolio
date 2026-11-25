@@ -13,13 +13,24 @@ interface HeaderProps {
 
 const NAME = 'Anas Tber';
 
+// Scroll to the very top rather than to the #top anchor: the intro starts below the
+// sticky header, so following the anchor would stop short on some browsers.
+const scrollToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  event.preventDefault();
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({ top: 0, left: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+};
+
 const Header: React.FC<HeaderProps> = ({ activeSection, theme, onThemeToggle }) => {
   const scrolled = useScrolled(150);
 
   return (
     <header className={`header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="header-inner">
-        <a className="header-logo" href="#top" aria-label="Anas Tber, back to top">
+        <a className="header-logo" href="#top" onClick={scrollToTop} aria-label="Anas Tber, back to top">
           {[...NAME].map((char, i) =>
             char === ' ' ? (
               <span key={i} className="space" />
