@@ -156,8 +156,12 @@
     }
   }
 
-  &:hover &-icon {
-    transform: rotate(180deg);
+  // A full turn, so the icon always ends upright (a half turn left the moon upside down),
+  // and only on devices with a real hover, since touch screens keep :hover after a tap.
+  @media (hover: hover) {
+    &:hover &-icon {
+      transform: rotate(360deg);
+    }
   }
 
   @media (max-width: 760px) {
